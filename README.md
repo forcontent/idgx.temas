@@ -1,1 +1,0 @@
-# idgx.temas
