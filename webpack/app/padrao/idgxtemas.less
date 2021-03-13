@@ -1,0 +1,18 @@
+/* Eg. Import Barceloneta styles 
+   ========================================================================== */
+@import "++theme++barceloneta/less/barceloneta.plone.less";
+
+
+/* -------------- Personalizando qualquer coisa -------------- */
+@plone-sitenav-bg: pink;
+@plone-sitenav-link-hover-bg: darken(pink, 20%);
+.plone-nav > li > a {
+  color: @plone-text-color;
+}
+
+
+
+/* Importa estilos padrão do tema
+   ========================================================================== */
+
+@import (less) "default.css";
