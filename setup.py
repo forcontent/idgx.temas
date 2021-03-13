@@ -5,6 +5,7 @@ from setuptools import find_packages
 from setuptools import setup
 
 
+version = '3.0a1'
 long_description = '\n\n'.join([
     open('README.rst').read(),
     open('CONTRIBUTORS.rst').read(),
@@ -14,22 +15,28 @@ long_description = '\n\n'.join([
 
 setup(
     name='idgx.temas',
-    version='1.0a1',
-    description="IDGX temas",
+    version=version,
+    description="Temas para o Portal Padrao",
     long_description=long_description,
-    # Get more from https://pypi.org/classifiers/
     classifiers=[
+        "Development Status :: 5 - Production/Stable",
         "Environment :: Web Environment",
-        "Framework :: Plone",
-        "Framework :: Plone :: Addon",
         "Framework :: Plone :: 5.2",
-        "Programming Language :: Python",
+        "Framework :: Plone :: Addon",
+        "Framework :: Plone :: Theme",
+        "Intended Audience :: Developers",
+        "Intended Audience :: System Administrators",
+        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+        "Operating System :: OS Independent",
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.7",
-        "Operating System :: OS Independent",
-        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python",
+        "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+        "Topic :: Internet :: WWW/HTTP",
+        "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-    keywords='Python Plone CMS',
+    keywords='Python Plone CMS IDGX .gov.br identidade_digital egov',
     author='ForContent',
     author_email='suporte@forcontent.com.br',
     url='https://github.com/collective/idgx.temas',
@@ -45,14 +52,16 @@ setup(
     package_dir={'': 'src'},
     include_package_data=True,
     zip_safe=False,
-    python_requires="==2.7, >=3.6",
+    python_requires="==2.7, >=3.8",
     install_requires=[
         'setuptools',
         # -*- Extra requirements: -*-
+        'Products.CMFPlone >=5.2',
+        'idgx.portal',
+        'plone.api',
+        'plone.app.themingplugins',
+        'plone.resource',
         'z3c.jbot',
-        'plone.api>=1.8.4',
-        'plone.restapi',
-        'plone.app.dexterity',
     ],
     extras_require={
         'test': [
@@ -63,12 +72,11 @@ setup(
             'plone.testing>=5.0.0',
             'plone.app.contenttypes',
             'plone.app.robotframework[debug]',
+            'plone.app.theming',
         ],
     },
     entry_points="""
     [z3c.autoinclude.plugin]
     target = plone
-    [console_scripts]
-    update_locale = idgx.temas.locales.update:update_locale
     """,
 )

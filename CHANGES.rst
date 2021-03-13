@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-1.0a1 (unreleased)
+3.0a1 (unreleased)
 ------------------
 
 - Initial release.
-  [forcontent]
+  [cleberjsantos]
