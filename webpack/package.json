@@ -25,8 +25,7 @@
   "repository": {},
   "license": "GPL-2.0",
   "dependencies": {
-    "sc-recipe-staticresources": "collective/sc.recipe.staticresources#1.1b7",
-    "jquery.cookie": "^1.4.1",
-    "less-loader": "^8.0.0"
+    "idgx-recipe-staticresources": "forcontent/idgx.portal",
+    "jquery.cookie": "^1.4.1"
   }
 }

@@ -1,4 +1,4 @@
-const makeConfig = require('sc-recipe-staticresources');
+const makeConfig = require('idgx-recipe-staticresources');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SpritesmithPlugin = require('webpack-spritesmith');
