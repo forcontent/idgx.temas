@@ -3,7 +3,7 @@
   "version": "3.0a1",
   "main": "app/idgxtemas.js",
   "scripts": {
-    "build": "./node_modules/.bin/webpack -p",
+    "build": "./node_modules/.bin/webpack --progress --mode=production",
     "debug": "NODE_ENV=debug ./node_modules/.bin/webpack --watch",
     "watch": "./node_modules/.bin/webpack -p --watch",
     "test": "NODE_ENV=testing ./node_modules/.bin/karma start --single-run"
