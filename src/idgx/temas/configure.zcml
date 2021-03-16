@@ -11,6 +11,7 @@
   <include package="plone.app.themingplugins" />
   <include package="plone.resource" />
 
+  <include file="themes.zcml" />
 
   <include package=".browser" />
 
