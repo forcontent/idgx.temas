@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rules
-  xmlns="http://namespaces.plone.org/diazo"
-  xmlns:css="http://namespaces.plone.org/diazo/css"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:esi="http://www.edge-delivery.org/esi/1.0"
-  xmlns:str="http://exslt.org/strings"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
-  <!-- Importa regras do Barceloneta -->
-  <xi:include href="++theme++barceloneta/rules.xml"><xi:fallback /></xi:include>
-
-  <rules css:if-content="#visual-portal-wrapper">
-    <!-- Suas regras adicionais aqui -->
+<rules xmlns="http://namespaces.plone.org/diazo"
+		xmlns:css="http://namespaces.plone.org/diazo/css"
+		xmlns:xhtml="http://www.w3.org/1999/xhtml"
+		xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+		xmlns:xi="http://www.w3.org/2001/XInclude"
+                xmlns:esi="http://www.edge-delivery.org/esi/1.0"
+                xmlns:str="http://exslt.org/strings">
+  <rules css:if-content="body:not(.userrole-anonymous)">
+    <!-- Import Barceloneta rules -->
+    <xi:include href="++theme++barceloneta/rules.xml"
+		/>
+    <after css:theme-children="head">
+      <link rel="stylesheet"
+		href="/++theme++barceloneta/less/barceloneta-compiled.css"
+		/>
+    </after>
   </rules>
-
+  <rules css:if-content="body.userrole-anonymous">
+    <theme href="index.html"
+		/>
+    <!-- your customizations go here -->
+  </rules>
 </rules>
