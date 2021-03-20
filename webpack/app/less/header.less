@@ -1,0 +1,47 @@
+/* IDGX Header */
+
+header#content-header {
+	background-color: @idgx-header;
+	border-bottom: 1px solid darken(@idgx-header, 10%);
+	box-shadow: 0 1px 3px rgb(0 0 0 / 17%);
+	padding-bottom: 8px;
+}
+
+div#idgx-title {
+	font-size: 2.4rem;
+
+	.icon-menu {
+		cursor: pointer;
+	    width: 38px;
+	    height: 38px;
+	    border-radius: 38px;
+	    text-align: center;
+	    display: block;
+	    margin-right: 10px;
+	}
+	.icon-menu:hover {
+		background-color: @idgx-main-color;
+		color: contrast(@idgx-main-color);
+	}
+	.icon-menu.menu-aberto:before {
+		content: '\e806';
+	}
+}
+
+#mainnavigation-wrapper {
+	display: none;
+}
+#mainnavigation-wrapper.menu-aberto {
+	display: block !important;
+}
+
+
+.plone-navbar {
+    background-color: @idgx-navbar;
+    box-shadow: none;
+}
+
+.plone-nav li a {
+    color: contrast(@idgx-navbar);
+    text-decoration: none;
+}

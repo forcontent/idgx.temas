@@ -1,0 +1,118 @@
+/* IDGX Header */
+
+header#content-header {
+	background-color: @idgx-header;
+	border-bottom: 1px solid darken(@idgx-header, 10%);
+	box-shadow: 0 1px 3px rgb(0 0 0 / 17%);
+	padding-bottom: 8px;
+}
+
+div#idgx-title {
+	font-size: 2.4rem;
+
+	.icon-menu {
+		cursor: pointer;
+	    width: 38px;
+	    height: 38px;
+	    border-radius: 38px;
+	    text-align: center;
+	    display: inline-block;
+	    margin-right: 10px;
+	}
+	.icon-menu:hover {
+		background-color: @idgx-main-color;
+		color: #fff;
+	}
+	.icon-menu.menu-aberto {
+		position: absolute;
+	    top: 5px;
+	    right: 12%;
+	    color: #fff;
+	    z-index: 3;
+	    font-size: 5rem;
+	}
+	.icon-menu.menu-aberto:hover {
+		color: darken(@idgx-header, 10%);
+	}
+	.icon-menu.menu-aberto::before {
+		content: '\e806';
+	}
+}
+
+#mainnavigation-wrapper {
+	display: none;
+}
+#mainnavigation-wrapper.menu-aberto {
+	display: block !important;
+}
+
+.plone-navbar {
+    background-color: @idgx-navbar;
+    box-shadow: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    bottom: 0;
+    z-index: 2;
+    transition: width 2s;
+}
+.menu-aberto .plone-navbar {
+	width: 90%;
+	opacity: 1;
+	transition: width 2s;
+}
+
+
+.plone-navbar-nav {
+	padding:20px 0;
+	width: 100%;
+	li {
+		float: none;
+		position: relative;
+		width: 100%;
+		display: block;
+	}
+	> li {
+    	float: none;
+    }
+    li .submenu {
+    	display: block !important;
+    	opacity: 100;
+    	visibility: visible;
+    	width: 100%;
+    	max-width: 100%;
+    }
+    li .submenu a {
+    	min-width: auto !important;
+    }
+}
+.plone-navbar-nav li .submenu li {
+    float: none !important;
+    width: auto !important;
+    display: inline-block;
+}
+.plone-nav li a {
+    color: contrast(@idgx-navbar);
+    text-decoration: none;
+    font-size: 3rem;
+    font-family: @idgx-title-font;
+}
+
+.plone-nav li ul li a {
+	background-color: transparent;
+	min-width: auto;
+	font-family: @idgx-main-font;
+}
+
+.plone-navbar-nav .current > a, .plone-navbar-nav .selected > a {
+    color: white;
+    background-color: transparent;
+}
+.plone-navbar-nav .selected>a:before {
+	content: "\2731";
+	font-size: 50%;
+    display: inline-block;
+    margin: -12px 0 0 -12px;
+    vertical-align: middle;
+}

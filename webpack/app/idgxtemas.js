@@ -1,5 +1,6 @@
 import Contraste from './js/contrast.js';
 import SocialLike from './js/sociallike';
+import Navegacao from './js/navegacao.js';
 
 
 $(() => {
@@ -11,4 +12,5 @@ $(() => {
 export default {
   Contraste,
   SocialLike,
+  Navegacao,
 }
