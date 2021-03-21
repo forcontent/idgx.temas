@@ -6,4 +6,10 @@
    i18n:domain="plone"
    i18n:attributes="title">
     <img src="logo.jpg" alt=""
-         tal:attributes="src string:${context/portal_url}/++plone++idgx.temas/logo.png" /></a>
+         tal:attributes="title view/logo_title;
+                         alt view/logo_title;
+         				 src string:${context/portal_url}/++plone++idgx.temas/logo.png" /></a>
+    <div id="idgx-title">
+      <span class="demo-icon icon-menu"> </span>
+    	<span tal:content="view/logo_title">Título do portal</span>
+    </div>

@@ -16,7 +16,8 @@
     <rules css:if-content="#visual-portal-wrapper">
 
       <!-- Copia titulo do portal para exibi-lo -->
-
+      <replace css:content-children="#idgx-title" css:theme-children="#idgx-title" />
+      <drop css:content="#idgx-title" />
 
       <!-- remove busca localizada -->
       <drop css:content=".searchSection" />
