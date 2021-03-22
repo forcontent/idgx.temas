@@ -11,10 +11,20 @@ jQuery(function($) {
 });
 
 jQuery(function($) {
-    $("#portal-searchbox .searchField").focusin(function(){
+    $("#portal-searchbox .searchField").focus(function(){
         $("#portal-searchbox").toggleClass("busca-ativada");
     });
-    $("#portal-searchbox .searchField").focusout(function(){
+    $("#portal-searchbox .searchField").blur(function(){
         $("#portal-searchbox").toggleClass("busca-ativada");
     });
+});
+
+jQuery(function($) {
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 60) {
+      $("body").addClass("header-fixo");
+    } else {
+      $("body").removeClass("header-fixo");
+    }
+  });
 });

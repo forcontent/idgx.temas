@@ -1,10 +1,42 @@
 #portal-searchbox {
-	background: #f1f1f1;
+	background: #e3e3e3;
     padding: 6px;
     border-radius: 14px;
+    clear: none;
+    width: 40%;
+    max-width: 100%;
+    margin-left: 0;
+    height: 45px;
+}
+#portal-searchbox:after {
+	content: "\e802";
+    font-family: idgx;
+    float: right;
+    color: @idgx-main-color;
+    font-size: 2rem;
+    margin-right: 6px;
 }
 input.searchField {
     background: transparent;
     border: 0;
     box-shadow: none;
+    font-style: italic;
+    font-size: 1.6rem;
+    width: 90% !important;
+}
+#portal-searchbox input[type="submit"] {
+    display: none;
+}
+#portal-searchbox.busca-ativada {
+	right: 15px;
+    width: 96%;
+    position: absolute;
+    top: 50px;
+
+    input.searchField {
+    	width: 100% !important;
+    }
+}
+#portal-searchbox.busca-ativada:after {
+	display: none;
 }

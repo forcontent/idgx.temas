@@ -1,6 +1,8 @@
 /* Variaveis Principais do IDGX */
 @idgx-main-color: #2864ae;
 @idgx-main-bg: #fff;
+
+/* Fontes */
 @idgx-main-font: Raleway,sans-serif;
 @idgx-title-font: merriweatherblack_italic;
 
@@ -37,20 +39,34 @@ h1, h2, h3, h4, h5, h6 {
 /* IDGX Conteudo */
 #portal-breadcrumbs {
 	background-color: @idgx-breadcrumb;
+	color: @idgx-main-color;
 	margin-top: 20px;
 
+	a {
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+
 	.container {
-		border-bottom: 1px solid darken(@idgx-breadcrumb, 10%);
-		padding: 2px;
 		margin-bottom: 40px;
 	}
 }
-@media (min-width: 1200px) {#portal-breadcrumbs .container {width: 1140px;}}
-@media (min-width: 1600px) {#portal-breadcrumbs .container {width: 1540px;}}
-
+#portal-breadcrumbs #breadcrumbs-home:before {
+	content: "\e80a";
+	font-family: idgx;
+}
+.plone-breadcrumb ol > li + li::after,
+.plone-breadcrumb ol > li + li::before  {
+	color: @idgx-main-color;
+	content: "/";
+	border: none;
+	top: 0;
+}
 
 .documentFirstHeading {
-    font-size: 3.6rem;
+    font-size: 4rem;
     line-height: 4rem;
     font-weight: 600;
     color: @idgx-title;
@@ -79,9 +95,14 @@ h1, h2, h3, h4, h5, h6 {
 @import '../css/_busca.less';
 
 
-/* Icones do tema usando fontello */
+/* Icones do tema usando fontello idgx */
 @import '../fontello/css/idgx.css';
-/* sobrepoe os icones do plone */
-.outer-wrapper [class^="icon-"]:before, [class*=" icon-"]:before {
+/* sobrepoe os icones do plone em algumas partes do site */
+.outer-wrapper [class^="icon-"]:before, 
+.outer-wrapper [class*=" icon-"]:before {
 	font-family: "idgx" !important;
+}
+.template-overview-controlpanel .outer-wrapper article [class^="icon-"]:before, 
+.template-overview-controlpanel .outer-wrapper article [class*=" icon-"]:before {
+	font-family: "fontello" !important;
 }
