@@ -30,6 +30,15 @@
       <!-- Adiciona o rodapé -->
       <replace css:content-children="#portal-footer-wrapper" css:theme-children="#portal-footer" />
 
+      <rules css:if-content=".portlet-static-idgx-navegacao">
+        <before css:content="#portal-globalnav" css:theme="#portal-footer" />
+        <drop css:content=".portlet-static-idgx-navegacao" />
+        <drop attributes="class" css:content="#portal-globalnav" />
+        <drop attributes="class" css:content="#portal-globalnav ul" />
+        <drop attributes="class" css:content="#portal-globalnav li" />
+
+      </rules>
+
     </rules>
 
 </rules>

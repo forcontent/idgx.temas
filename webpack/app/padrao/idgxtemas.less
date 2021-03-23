@@ -88,6 +88,65 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+#portal-footer-wrapper .portletWrapper:first-child {
+    border-bottom: 0;
+}
+
+footer #portal-globalnav {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+
+	li {
+		display: inline-block;
+		border-left: 1px solid #ffffff1a;
+		max-width: 25%;
+		min-width: 15%;
+		text-align: left;
+		font-weight: bold;
+		padding: 0 20px;
+
+		ul {
+			display: block;
+			margin: 0;
+			padding: 0;
+
+			ul {
+				margin-left: 10px;
+			}
+		}
+
+		li {
+			display: block;
+			max-width: 100%;
+			font-weight: normal;
+			padding: 0;
+			border-left: 0;
+		}
+
+		a {
+			text-decoration: none;
+			font-family: @idgx-title-font;
+			font-size: 2rem;
+
+		}
+	}
+	li li a {
+		font-family: @idgx-main-font;
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+	li li li a {
+		font-weight: normal;
+	}
+
+	.opener{
+		display: none;
+	}
+}
+
 .portlet-static-idgx-icones li {
 	list-style: none;
 	display: inline-block;
