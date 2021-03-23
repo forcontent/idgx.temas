@@ -88,6 +88,18 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.portlet-static-idgx-icones li {
+	list-style: none;
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	font-size: 5rem;
+
+	a {
+		color: #fff;
+	}
+}
+
 /********** Estilos Básicos do IDG **********/
 
 @import '../css/_fonts.css';
@@ -99,7 +111,9 @@ h1, h2, h3, h4, h5, h6 {
 @import '../fontello/css/idgx.css';
 /* sobrepoe os icones do plone em algumas partes do site */
 .outer-wrapper [class^="icon-"]:before, 
-.outer-wrapper [class*=" icon-"]:before {
+.outer-wrapper [class*=" icon-"]:before,
+footer [class^="icon-"]:before, 
+footer [class*=" icon-"]:before  {
 	font-family: "idgx" !important;
 }
 .template-overview-controlpanel .outer-wrapper article [class^="icon-"]:before, 

@@ -25,6 +25,8 @@
       <!-- remove busca localizada -->
       <drop css:content=".searchSection" />
 
+      <after css:content=".portlet-static-idgx-icones" css:theme="#mainnavigation" />
+
       <!-- Adiciona o rodapé -->
       <replace css:content-children="#portal-footer-wrapper" css:theme-children="#portal-footer" />
 

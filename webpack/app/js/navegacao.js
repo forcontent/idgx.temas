@@ -1,7 +1,11 @@
 
 jQuery(function($) {
     $(".icon-menu").click(function(){
-        $(".icon-menu").toggleClass("menu-aberto");
+        $("#mainnavigation-wrapper").toggleClass("menu-aberto");
+    });
+});
+jQuery(function($) {
+    $(".icon-menu-aberto").click(function(){
         $("#mainnavigation-wrapper").toggleClass("menu-aberto");
     });
 });
