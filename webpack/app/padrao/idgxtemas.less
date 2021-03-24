@@ -92,6 +92,33 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 0;
 }
 
+#portal-footer-wrapper .portletWrapper {
+    display: block;
+}
+
+.voltar-topo {
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: right;
+	margin: 20px 0;
+
+	a {
+		text-decoration: none;
+		font-size: 1.3rem;
+	}
+	a:after {
+		content: "\f139";
+		font-family: idgx;
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		font-size: 20px;
+		margin-left: 5px;
+	}
+}
+#portal-footer-wrapper {
+	padding-bottom: 0;
+}
 footer #portal-globalnav {
 	margin: 0;
 	padding: 0;
@@ -114,7 +141,7 @@ footer #portal-globalnav {
 			padding: 0;
 
 			ul {
-				margin-left: 10px;
+				margin-left: 5px;
 			}
 		}
 
@@ -147,16 +174,31 @@ footer #portal-globalnav {
 	}
 }
 
-.portlet-static-idgx-icones li {
-	list-style: none;
-	display: inline-block;
-	width: 60px;
-	height: 60px;
-	font-size: 5rem;
+.portlet-static-idgx-icones { 
 
-	a {
-		color: #fff;
+	ul {
+		margin: 40px 0;
+		padding: 0;
 	}
+
+	li {
+		list-style: none;
+		display: inline-block;
+		width: 60px;
+		height: 60px;
+		font-size: 5rem;
+
+		a {
+			color: #fff;
+		}
+	}
+}
+
+.portlet-static-idgx-creditos {
+	background-color: darken(@idgx-footer, 10%);
+	padding: 10px 20px;
+	margin-top: 20px;
+	font-size: 80%;
 }
 
 /********** Estilos Básicos do IDG **********/
