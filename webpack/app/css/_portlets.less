@@ -9,16 +9,24 @@
 		font-family: @idgx-title-font;
 		background: transparent;
 		font-size: 3rem;
-		a {
-			text-decoration: none;	
-		}
-
 	}
+
+	.portletHeader a {
+		text-decoration: none;
+		font-family: @idgx-title-font;	
+		color: @idgx-title;
+	}
+
 	.portlet .portletContent {
 		background: transparent;
 		border-top: 1px solid #dedede;
 		 > ul li:hover {
 		 	background: transparent;
+		}
+		 > ul > li a {
+			color: @idgx-title;
+			text-decoration: none;
+			font-weight: bold;
 		}
 	}
 	.portlet .portletFooter {

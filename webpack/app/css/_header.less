@@ -14,6 +14,8 @@ header#content-header {
 	flex-wrap: wrap;
 	width: 100%;
 	padding-left: 10px;
+	margin-top: 0;
+    padding-top: 15px;
 }
 #portal-logo {
 	width: 50%;
@@ -110,10 +112,12 @@ div#idgx-title {
 		position: relative;
 		width: 100%;
 		display: block;
+		clear: both;
 	}
 	> li {
     	float: none;
     	border-top: 1px solid #ffffff1a;
+    	padding: 5px 0;
     }
     li .submenu {
     	display: block !important;
@@ -126,6 +130,9 @@ div#idgx-title {
     	min-width: auto !important;
     	font-weight: bold;
     	background-color: transparent;
+    }
+    li .submenu a:hover {
+    	background-color: darken(@idgx-navbar, 10%) !important;
     }
     li .submenu .submenu a {
     	font-weight: normal;
@@ -155,6 +162,12 @@ div#idgx-title {
     text-decoration: none;
     font-size: 3rem;
     font-family: @idgx-title-font;
+}
+.plone-nav li a:hover, .plone-nav li a:focus, 
+.plone-navbar-nav .current > a, .plone-navbar-nav .selected > a, 
+.plone-navbar-nav .current > a:hover, .plone-navbar-nav .selected > a:hover, 
+.plone-navbar-nav .current > a:focus, .plone-navbar-nav .selected > a:focus {
+    background-color: darken(@idgx-navbar, 10%);
 }
 .plone-nav li ul {
 	height: auto;
@@ -186,8 +199,6 @@ div#idgx-title {
 	top: inherit;
 }
 
-
-
 .header-fixo {
 	#content-header {
 		position: fixed;
@@ -205,6 +216,9 @@ div#idgx-title {
 	#idgx-title {
 		padding-top: 5px;
     	padding-left: 20px;
+	}
+	#idgx-actions {
+		display: none;
 	}
 }
 

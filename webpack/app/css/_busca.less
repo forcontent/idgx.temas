@@ -1,5 +1,5 @@
 #portal-searchbox {
-	background: #e3e3e3;
+	background: @idgx-searchbox;
     padding: 6px;
     border-radius: 14px;
     clear: none;
@@ -12,7 +12,7 @@
 	content: "\e802";
     font-family: idgx;
     float: right;
-    color: @idgx-main-color;
+    color: contrast(@idgx-searchbox);
     font-size: 2rem;
     margin-right: 6px;
 }
@@ -23,6 +23,9 @@ input.searchField {
     font-style: italic;
     font-size: 1.6rem;
     width: 90% !important;
+}
+input.searchField::placeholder {
+    color: contrast(@idgx-searchbox);
 }
 #portal-searchbox input[type="submit"] {
     display: none;
