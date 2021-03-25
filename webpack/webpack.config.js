@@ -33,19 +33,6 @@ let createTheme = (theme) => {
           { from: `app/${theme}/manifest.cfg`, to: 'manifest.cfg' },
         ], {
         }),
-        new SpritesmithPlugin({
-          src: {
-            cwd: `app/${theme}/sprite`,
-            glob: '*.png'
-          },
-          target: {
-            image: `app/${theme}/img/sprite.png`,
-            css: `app/${theme}/_sprite.less`
-          },
-          apiOptions: {
-            cssImageRef: './img/sprite.png'
-          }
-        }),
       );
     },
   );
