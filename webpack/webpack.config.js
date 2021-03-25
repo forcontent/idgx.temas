@@ -31,6 +31,7 @@ let createTheme = (theme) => {
         new CopyWebpackPlugin([
           { from: 'app/rules.xml', to: 'rules.xml' },
           { from: `app/${theme}/manifest.cfg`, to: 'manifest.cfg' },
+          { from: `app/img`, to: 'img' },
         ], {
         }),
       );
