@@ -1,0 +1,63 @@
+/* IDGX Estilos Basicos */
+body {
+	background-color: @idgx-body;
+	color: contrast(@idgx-body);
+	font-family: @idgx-main-font;
+	font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+a {
+    color: @idgx-link;
+    text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: @idgx-title-font;
+}
+#content-core a {
+    border-bottom: none;
+}
+
+/* IDGX Conteudo */
+.coluna-principal, .coluna-1, .coluna-2 {
+	padding-left: 15px;
+    padding-right: 15px;
+}
+#portal-breadcrumbs {
+	background-color: @idgx-breadcrumb;
+	color: @idgx-main-color;
+	margin-top: 20px;
+
+	a {
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+
+	.container {
+		margin-bottom: 40px;
+	}
+}
+#portal-breadcrumbs #breadcrumbs-home:before {
+	content: "\e80a";
+	font-family: idgx;
+}
+.plone-breadcrumb ol > li + li::after,
+.plone-breadcrumb ol > li + li::before  {
+	color: @idgx-main-color;
+	content: "/";
+	border: none;
+	top: 0;
+}
+
+.documentFirstHeading {
+    font-size: 4rem;
+    line-height: 5rem;
+    font-weight: 600;
+    color: @idgx-title;
+    padding-bottom: 10px;
+    margin: 0;
+    border-bottom: none;
+}

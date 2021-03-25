@@ -1,0 +1,14 @@
+/* Icones do tema usando fontello idgx */
+
+@import '../fontello/css/idgx.css';
+/* sobrepoe os icones do plone em algumas partes do site */
+.outer-wrapper [class^="icon-"]:before, 
+.outer-wrapper [class*=" icon-"]:before,
+footer [class^="icon-"]:before, 
+footer [class*=" icon-"]:before  {
+	font-family: "idgx" !important;
+}
+.template-overview-controlpanel .outer-wrapper article [class^="icon-"]:before, 
+.template-overview-controlpanel .outer-wrapper article [class*=" icon-"]:before {
+	font-family: "fontello" !important;
+}
