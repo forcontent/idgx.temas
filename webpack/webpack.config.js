@@ -42,5 +42,4 @@ let createTheme = (theme) => {
 
 module.exports = [
   createTheme('padrao'),
-  createTheme('moderno'),
 ];

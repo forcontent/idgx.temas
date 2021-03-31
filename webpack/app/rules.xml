@@ -62,6 +62,11 @@
 
       <after css:content=".portlet-static-idgx-icones" css:theme="#mainnavigation" />
 
+      <!-- Adiciona classe para controlar o destaque no topo -->
+      <rules css:if-content=".destaque-principal">
+        <merge attributes="class" css:content="body" css:theme="body" />
+      </rules>
+
       <!-- Adiciona o rodapé -->
       <replace css:content-children="#portal-footer-wrapper" css:theme-children="#portal-footer" />
 
@@ -74,6 +79,7 @@
         <drop attributes="class" css:content="#portal-globalnav li" />
       </rules>
 
+      
       <after css:content=".portlet-static-idgx-creditos" css:theme="#portal-footer" method="raw" />
       <drop css:content=".portletWrapper .portlet-static-idgx-creditos" />
 

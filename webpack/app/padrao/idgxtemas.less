@@ -1,5 +1,6 @@
 /* Variaveis Principais do IDGX PADRAO */
 @idgx-main-color: #2864ae;
+@idgx-support-color: @idgx-main-color;
 @idgx-main-bg: #fff;
 
 /* Fontes */
@@ -11,7 +12,8 @@
 @idgx-title: @idgx-main-color;
 @idgx-link: lighten(@idgx-main-color, 10%);
 @idgx-header: @idgx-main-bg;
-@idgx-searchbox: darken(@idgx-main-bg, 10%);
+@idgx-searchbox: darken(@idgx-main-bg, 8%);
+@idgx-searchbox-icon: @idgx-support-color;
 @idgx-navbar: @idgx-main-color;
 @idgx-breadcrumb: @idgx-main-bg;
 @idgx-footer: darken(@idgx-main-color, 10%);
@@ -22,6 +24,11 @@
 @import '../css/_basico.less';
 @import '../css/_header.less';
 @import '../css/_busca.less';
+@import '../css/_tiles.less';
+@import '../css/_colecao.less';
 @import '../css/_portlets.less';
 @import '../css/_footer.less';
 @import '../css/_icones.less';
+
+
+/* Estilos customizados, caso precise */

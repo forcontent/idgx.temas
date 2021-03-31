@@ -1,0 +1,96 @@
+.template-summary_view {
+
+    article.tileItem {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: start;
+        border-bottom: 1px solid darken(@idgx-main-bg, 15%);
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+
+        h2, div {
+            width: 70%;
+        }
+        a {
+            text-decoration: none;
+        }
+        .tileHeadline {
+            order: 1;
+        }
+        .documentByLine {
+            order: 4;
+        }
+        .tileImageNoFloat,
+        .tileImage {
+            order: 0;
+            width: 27%;
+            text-align: right;
+            position: absolute;
+            right: 0;
+        }
+        .tileBody {
+            order: 2;
+        }
+        .tileFooter {
+            order: 5;
+            a:before {
+                content: "\e80a";
+                font-family: fontello;
+                background-color: @idgx-title;
+                color: contrast(@idgx-title);
+                font-size: 12px;
+                height: 18px;
+                width: 18px;
+                border-radius: 14px;
+                margin-right: 5px;
+                display: inline-block;
+                text-align: center;
+            }
+        }
+        .visualClear {
+            width: 100%;
+            clear: both;
+            order: 6;
+        }
+
+    }
+}
+#category {
+    display: flex;
+    background-color: @idgx-main-color;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        line-height: 5rem;
+        margin-top: 3px;
+    }
+    li {
+        margin-right: 5px;
+    }
+    .link-category {
+        background-color: contrast(@idgx-main-color);
+        color: @idgx-main-color;
+        text-decoration: none;
+        font-size: 90%;
+    }
+    .link-category:hover {
+        opacity: .9;
+    }
+}
+#category:before {
+    content: "\e808";
+    font-family: idgx;
+    font-size: 3.6rem;
+    color: contrast(@idgx-main-color);
+    margin-right: 20px;
+    text-align: center;
+    width: 50px;
+}
+#categories-filed-under {
+    display: none;
+}
