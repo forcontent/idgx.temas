@@ -70,6 +70,14 @@
       <!-- Adiciona o rodapé -->
       <replace css:content-children="#portal-footer-wrapper" css:theme-children="#portal-footer" />
 
+      <!-- Adiciona widget do addthis -->
+      <after css:content="h1.documentFirstHeading">
+          <div class="addthis_inline_share_toolbox"></div>
+      </after>
+      <before css:content="#viewlet-below-content-body">
+          <div class="addthis_inline_share_toolbox"></div>
+      </before>
+
       <!-- Copia menu para o rodapé -->
       <rules css:if-content=".portlet-static-idgx-navegacao">
         <before css:content="#portal-globalnav" css:theme="#portal-footer" />
