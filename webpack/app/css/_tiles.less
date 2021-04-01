@@ -24,7 +24,14 @@
     }
     h1, h2, h3, h4 {
     	font-size: 126%;
+    	line-height: 1.3;
     }
+    p {
+    	line-height: 1.6;
+    }
+}
+.tile-header {
+	font-size: 180%;
 }
 
 /* remove breadcrumb de capas */
@@ -111,6 +118,7 @@ body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view
 	}
 }
 
+/* TAGS */
 .tile.tag-urgente h1:before,
 .tile.tag-urgente h2:before {
 	display: block;
@@ -124,6 +132,7 @@ body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view
 }
 
 
+
 /* tile de foto sobreposta */
 .tile.foto-sobreposta {
     position: relative;
@@ -133,7 +142,7 @@ body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view
 
     .tile-content {
         align-self: flex-end;
-        padding-bottom: 40px;
+        padding-bottom: 20px;
     }
     img {
         object-fit: cover;
@@ -197,6 +206,55 @@ body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view
     padding: 0 20px;
     color: #fff;
     line-height: 1.9rem !important;
+}
+
+/* bloco de itens */
+.tile.bloco-itens {
+	.tile-content {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		div {
+			outline: 1px solid #e0e0e0;
+		    box-shadow: 0 9px 9px 0 rgb(0 0 0 / 16%);
+			width: 23%;
+			text-align: center;
+			height: 200px;
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			flex-flow: wrap;
+			justify-content: center;
+			margin-bottom: 40px;
+
+			* {
+				width: 100%;
+			}
+		}
+		div:hover {
+			box-shadow: 0 15px 15px 0 rgb(0 0 0 / 16%);
+		}
+	}
+	a {
+		color: @idgx-main-color !important;
+	}
+	i {
+		display: block;
+		text-align: center;
+		font-size: 6rem;
+		margin-bottom: 1rem;
+		color: lighten(@idgx-main-color, 20%) !important;
+	}
+}
+
+/* Titulo de secao */
+.titulo-secao {
+	text-align: center;
+	margin-bottom: 40px;
+	h1, h2, h3 {
+		font-size: 180%;
+	}
 }
 
 /* Cover fixes */
