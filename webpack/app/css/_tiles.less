@@ -1,42 +1,105 @@
+#content .tile {
+	a:link, a:visited {
+	    color: @idgx-tile-link;
+	    text-decoration: none;
+	}
+	a:hover {
+    	opacity: .8;
+    	border-bottom: 0;
+	}
+}
+
+.tile {
+	width: 100%;
+    position: relative;
+
+	.tile-section {
+	  color: @idgx-main-color;
+	  font-weight: bold;
+	  margin-bottom: 0 !important;
+	  text-transform: uppercase;
+	}
+    .tile-content {
+        width: 100%;
+    }
+    h1, h2, h3, h4 {
+    	font-size: 126%;
+    }
+}
+
+/* remove breadcrumb de capas */
+body.portaltype-collective-cover-content {
+	#portal-breadcrumbs {
+		display: none;
+	}
+}
+
+/* Destaque do topo */
 body.destaque-topo.portaltype-collective-cover-content.template-view #content-header {
-	margin-bottom: 450px;
+	margin-bottom: 0
 }
 body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view {
-	padding-top: 550px;
+	padding-top: 130px;
 }
 .portaltype-collective-cover-content.template-view {
 	.row.destaque-principal {
 		.tile {
-			position: absolute;
-		    background: @idgx-main-color;
+			position: inherit;
 		    color: contrast(@idgx-main-color);
-		    top: 130px;
-		    left: 0;
-		    right: 0;
 		    width: 100%;
-		    height: 450px;
+		    height: 550px;
 		    z-index: -1;
 		}
 		.tile-content {
-			width: 800px;
-			margin: 100px auto 0 auto;
+			width: 900px;
+			margin: 100px 0 0 0;
+			height: 450px;
+		    justify-content: flex-end;
+		    display: flex;
+		    flex-flow: column;
+		    padding-bottom: 60px;
+		    box-sizing: border-box;
+		    margin-bottom: 50px;
 		}
 		.column.col-md-12 {
 			width: 1000px;
 			margin: 0 auto;
 			position: inherit;
 		}
+		img {
+			height: 550px;
+		    width: 100%;
+		    -o-object-fit: cover;
+		    object-fit: cover;
+		    position: absolute !important;
+		    top: 130px;
+		    left: 0;
+		    z-index: -2;
+		}
+		h1, h2, h3, h4 {
+			a {
+				color: #fff !important;
+				text-decoration: none;
+				font-size: 150%;
+			}
+		}
+		h1 {
+			font-size: 180%;
+		}
+		h2 {
+			font-size: 140%;
+		}
 	}
-	.destaque-principal .tile::before {
+	.destaque-principal .tile::after {
 		background-image: radial-gradient(transparent,#000);
 		background-color: transparent;
 	    content: " ";
 	    white-space: nowrap;
 	    display: block;
-	    height: 450px;
+	    height: 550px;
 	    position: absolute;
 	    left: 0;
-	    top: 0;
+	    top: 130px;
 	    right: 0;
 	    bottom: 0;
 	    opacity: .4;
@@ -46,4 +109,100 @@ body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view
 	.col-xs-12 {
 		position: inherit;
 	}
+}
+
+.tile.tag-urgente h1:before,
+.tile.tag-urgente h2:before {
+	display: block;
+    width: 82px;
+    font-size: 16px;
+    content: "Urgente";
+    background-color: red;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 12px;
+}
+
+
+/* tile de foto sobreposta */
+.tile.foto-sobreposta {
+    position: relative;
+    display: flex;
+    height: 370px;
+    margin-bottom: 35px;
+
+    .tile-content {
+        align-self: flex-end;
+        padding-bottom: 40px;
+    }
+    img {
+        object-fit: cover;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: -2;
+        height: 370px;
+    }
+    h1,
+    h2,
+    h3 {
+        padding: 0 100px 5px 20px;
+        margin: 5px 0 0 0 !important;
+        color: #fff;
+    }
+    p {
+        padding: 0 100px 0 20px;
+        color: #fff;
+    }
+    h2 a, h1 a, h3 a,
+    h2 a:hover, h1 a:hover, h3 a:hover {
+        color: #fff !important;
+    }
+    h1 {
+    	font-size: 180%;
+    }
+    h2 {
+    	font-size: 140%;
+    }
+    h3 {
+    	font-size: 120%;
+    }
+    .tile-section, time {
+        color: #0094ff;
+        left: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 0 100px 10px 20px;
+    }
+    >div:after {
+        background-color: transparent;
+        background-image:
+        linear-gradient(
+          transparent, #000
+        );
+        content: ".";
+        display: block;
+        height: 370px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        opacity: .8;
+        z-index: -1;
+        text-indent: -3000px;
+    }
+}
+#content .tile.foto-sobreposta p,
+#content .tile.foto-sobreposta-pequena p {
+    padding: 0 20px;
+    color: #fff;
+    line-height: 1.9rem !important;
+}
+
+/* Cover fixes */
+#class-chooser {
+	min-height: 200px !important;
+}
+body .cssclasswidget-classlist {
+    max-height: 16rem !important;
 }
