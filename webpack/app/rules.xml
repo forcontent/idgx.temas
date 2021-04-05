@@ -52,7 +52,7 @@
       <!-- Move siteactions para o topo -->
       <before css:content-children=".portlet-static-idgx-actions" css:theme-children="#idgx-actions" />
       <drop css:content="footer .portletActions" />
-      <drop css:content="footer .portlet-static-idgx-action" />
+      <drop css:content="footer .portlet-static-idgx-actions" />
 
       <!-- remove busca localizada -->
       <drop css:content=".searchSection" />
