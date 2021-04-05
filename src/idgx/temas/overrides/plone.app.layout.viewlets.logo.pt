@@ -11,5 +11,9 @@
          				 src view/img_src" /></a>
     <div id="idgx-title">
       <span class="demo-icon icon-menu"> </span>
-    	<span tal:content="view/logo_title">Título do portal</span>
+    	<a title="Home"
+         tal:attributes="href view/navigation_root_url;
+                         title view/navigation_root_title"
+         i18n:domain="plone"
+         i18n:attributes="title">Título do portal</a>
     </div>

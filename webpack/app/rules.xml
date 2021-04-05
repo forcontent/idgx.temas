@@ -49,17 +49,15 @@
 
     <rules css:if-content="#visual-portal-wrapper">
 
-      <!-- Copia titulo do portal para exibi-lo
-      <replace css:content-children="#idgx-title" css:theme-children="#idgx-title" />
-      <drop css:content="#idgx-title" /> -->
-
       <!-- Move siteactions para o topo -->
-      <copy css:content=".actions-site_actions" css:theme="#idgx-actions" />
+      <before css:content-children=".portlet-static-idgx-actions" css:theme-children="#idgx-actions" />
       <drop css:content="footer .portletActions" />
+      <drop css:content="footer .portlet-static-idgx-action" />
 
       <!-- remove busca localizada -->
       <drop css:content=".searchSection" />
 
+      <!-- adiciona icones sociais ao menu -->
       <after css:content=".portlet-static-idgx-icones" css:theme="#mainnavigation" />
 
       <!-- Adiciona classe para controlar o destaque no topo -->
