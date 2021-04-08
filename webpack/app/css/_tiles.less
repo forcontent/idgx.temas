@@ -329,6 +329,7 @@ body .cssclasswidget-classlist {
 		    width: 60px;
 	    	height: 60px;
 	    	line-height: 1rem;
+	    	background-color: #fff;
 	    }
 	    img {
 	    	height: 32px;
@@ -339,20 +340,45 @@ body .cssclasswidget-classlist {
 	.layout-actions {
 		a {
 			color: #fff;
+			background-color: #000;
 		}
 	}
 }
 
 .layout {
+	
 	.cover-row {
-		padding: 25px 0% !important;
+		padding: 25px 1px !important;
 		border-top: 1px dashed #7a7a7a !important;
+		background-color: #fff !important;
+	}
+	.cover-column {
+
 	}
 	.cover-tile {
     	margin: 25px 20px !important;
+    	text-align: center;
 	}
 }
 
+.to-delete {
+	outline: 2px red dashed !important;
+}
+.cover-row.to-delete {
+	border-color: transparent !important;
+}
+
+.ui-sortable-helper {
+	opacity: .9;
+}
+
+.close:hover {
+	color: #fff;
+	background-color: red;
+	opacity: 1;
+	text-shadow: none;
+	font-size: 2rem;
+}
 /*apenas para o tema*/
 .template-layoutedit.header-fixo, 
 .template-compose.header-fixo {
