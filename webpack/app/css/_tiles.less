@@ -281,3 +281,71 @@ body .cssclasswidget-classlist {
 		}
 	}
 }
+#sidebar {
+    display: flex;
+    justify-content: center;
+
+    ul {
+    	display: flex;
+    	padding-left: 0;
+    }
+
+	li {
+		
+	    display: flex;
+	    margin: 2px;
+	    display: inline-block;
+	    text-align: center;
+	    
+	    
+
+	    a {
+	    	display: flex;
+		    flex-wrap: wrap;
+		    justify-content: center;
+		    padding: 0;
+		    border-radius: 5px;
+		    text-decoration: none;
+		    color: #000;
+		    border: 1px solid #cecece;
+		    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+		    border-radius: 4px;
+		    width: 60px;
+	    	height: 60px;
+	    	line-height: 1rem;
+	    }
+	    img {
+	    	height: 32px;
+		    width: 32px;
+		    margin: 3px;
+	    }
+	} 
+	.layout-actions {
+		a {
+			color: #fff;
+		}
+	}
+}
+
+.layout {
+	.cover-row {
+		padding: 25px 0% !important;
+		border-top: 1px dashed #7a7a7a !important;
+	}
+	.cover-tile {
+    	margin: 25px 20px !important;
+	}
+}
+
+/*apenas para o tema*/
+.template-layoutedit.header-fixo, 
+.template-compose.header-fixo {
+	#content-header {
+		position: inherit;
+	}
+}
+.template-compose.header-fixo #contentchooser-content-show-button {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+}
