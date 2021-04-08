@@ -1,5 +1,5 @@
 #content .tile {
-	a:link, a:visited {
+	a, a:link, a:visited {
 	    color: @idgx-tile-link;
 	    text-decoration: none;
 	}
@@ -29,6 +29,10 @@
     p {
     	line-height: 1.6;
     }
+    img {
+    	max-width: 100%;
+    	height: auto;
+    }
 }
 .tile-header {
 	font-size: 180%;
@@ -40,6 +44,7 @@ body.portaltype-collective-cover-content {
 		display: none;
 	}
 }
+
 
 /* embed */
 .cover-embed-tile {
@@ -156,6 +161,7 @@ body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view
         width: 100%;
         position: absolute;
         top: 0;
+        left: 0;
         z-index: -2;
         height: 370px;
     }
@@ -214,6 +220,16 @@ body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view
     color: #fff;
     line-height: 1.9rem !important;
 }
+
+/* NITF */
+p.tile-subtitle {
+	display: inline-block;
+	background-color: @idgx-main-color;
+	color: contrast(@idgx-main-color);
+	margin-left: 20px;
+	padding: 3px 10px !important;
+}
+
 
 /* bloco de itens */
 .tile.bloco-itens {
