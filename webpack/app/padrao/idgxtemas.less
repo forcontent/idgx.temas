@@ -10,7 +10,8 @@
 
 /* Demais variaveis do IDGX */
 @idgx-body: @idgx-main-bg;
-@idgx-title: @idgx-main-color;
+@idgx-title: #333;
+@idgx-title-link: @idgx-main-color;
 @idgx-link: lighten(@idgx-main-color, 10%);
 @idgx-tile-link: lighten(@idgx-main-color, 10%);
 @idgx-header: @idgx-main-bg;
@@ -21,12 +22,18 @@
 @idgx-breadcrumb: @idgx-main-bg;
 @idgx-footer: darken(@idgx-main-color, 10%);
 
+/* tags */
+@tag-urgente: red;
+@tag-aviso: yellow;
+@tag-comunicado: green; 
+
 
 /*Estilos Básicos do IDGX */
 @import '../css/_fonts.css';
 @import '../css/_basico.less';
 @import '../css/_header.less';
 @import '../css/_busca.less';
+@import '../css/_conteudo.less';
 @import '../css/_tiles.less';
 @import '../css/_colecao.less';
 @import '../css/_portlets.less';

@@ -137,13 +137,36 @@ body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view
     width: 82px;
     font-size: 16px;
     content: "Urgente";
-    background-color: red;
+    background-color: @tag-urgente;
+    color: contrast(@tag-urgente);
     text-align: center;
     padding: 5px;
     margin-bottom: 12px;
 }
-
-
+.tile.tag-aviso h1:before,
+.tile.tag-aviso h2:before {
+	display: block;
+    width: 82px;
+    font-size: 16px;
+    content: "Aviso";
+    background-color: @tag-aviso;
+    color: contrast(@tag-aviso);
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 12px;
+}
+.tile.tag-comunicado h1:before,
+.tile.tag-comunicado h2:before {
+	display: block;
+    width: 120px;
+    font-size: 16px;
+    content: "Comunicado";
+    background-color: @tag-comunicado;
+    color: contrast(@tag-comunicado);
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 12px;
+}
 
 /* tile de foto sobreposta */
 .tile.foto-sobreposta {
@@ -229,16 +252,105 @@ p.tile-subtitle {
 	margin-left: 20px;
 	padding: 3px 10px !important;
 }
+.tile-media-producer {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    color: #fff;
+    font-size: 80%;
+    text-align: right;
+    padding: 0 10px 0 0;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 1%, rgba(38,38,38,0.7959558823529411) 41%, rgba(255,255,255,0) 78%, rgba(255,255,255,0) 100%);
+}
+.tile-media-producer:before {
+	content: '\e804';
+	font-family: idgx;
+	font-size: 80%;
+	opacity: .7;
+	display: inline-block;
+	margin-right: 3px;
+}
 
-
-/* bloco de itens */
+/* bloco de itens DIV */
 .tile.bloco-itens {
 	.tile-content {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
 
-		div {
+		ul {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			width: 100%;
+			padding-left: 0;
+		}
+
+		div, li {
+			outline: 1px solid #e0e0e0;
+		    box-shadow: 0 9px 9px 0 rgb(0 0 0 / 16%);
+			width: 23%;
+			text-align: center;
+			height: 200px;
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			flex-flow: wrap;
+			justify-content: center;
+			margin-bottom: 40px;
+			position: relative;
+		}
+		div:hover, li:hover {
+			box-shadow: 0 15px 15px 0 rgb(0 0 0 / 16%);
+		}
+	}
+	a {
+		color: @idgx-main-color !important;
+		font-weight: bold;
+		font-family: merriweatherblack_italic;
+		font-size: 126%;
+    	line-height: 1.3;
+    	display: block;
+	}
+	a span {
+		font-weight: normal !important;
+		font-family: @idgx-main-font;
+		font-size: 1.3rem;
+		display: block;
+		color: @idgx-text-color;
+	}
+	i {
+		display: block;
+		text-align: center;
+		font-size: 6rem;
+		margin-bottom: 1rem;
+		color: lighten(@idgx-main-color, 20%) !important;
+	}
+	p {
+		font-size: 1.3rem;
+	}
+	h1, h2, h3, h4 {
+		margin: 0;
+	}
+}
+
+/* bloco de itens LISTA */
+.tile.lista-itens {
+	.tile-content {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		ul, div.list-tile {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			width: 100%;
+			padding-left: 0;
+		}
+
+		li, .list-item {
 			outline: 1px solid #e0e0e0;
 		    box-shadow: 0 9px 9px 0 rgb(0 0 0 / 16%);
 			width: 23%;
@@ -255,12 +367,44 @@ p.tile-subtitle {
 				width: 100%;
 			}
 		}
-		div:hover {
+		li:hover, .list-item:hover {
 			box-shadow: 0 15px 15px 0 rgb(0 0 0 / 16%);
 		}
 	}
 	a {
 		color: @idgx-main-color !important;
+	}
+	li, .list-item {
+		position: relative;
+	}
+	li a, .list-item a {
+		display: flex;
+		justify-content: center;
+		height: 200px;
+		padding: 10px;
+		align-items: center;
+		font-weight: bold;
+	}
+	li a:before, .list-item a:before {
+		content: "\e813";
+		font-family: idgx;
+		color: @idgx-main-color;
+		font-size: 30px;
+		line-height: 30px;
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		right: 1px;
+		transform: rotate(-45deg);
+	}
+	li:hover a, li:hover a:before,
+	.list-item:hover a, .list-item:hover a:before {
+		background-color: @idgx-main-color;
+		color: contrast(@idgx-main-color) !important;
+	}
+	li:hover a:before,
+	.list-item:hover a:before {
+		background-color: transparent;
 	}
 	i {
 		display: block;
@@ -269,6 +413,111 @@ p.tile-subtitle {
 		margin-bottom: 1rem;
 		color: lighten(@idgx-main-color, 20%) !important;
 	}
+	h1, h2, h3, h4 {
+		margin: 0;
+	}
+}
+
+/* Bloco Colorido */
+.tile.bloco-colorido {
+    position: relative;
+    display: flex;
+    height: 370px;
+    margin-bottom: 35px;
+    background-color: @idgx-main-color;
+    color: contrast(@idgx-main-color);
+
+    .tile-content {
+        align-self: flex-end;
+        padding-bottom: 20px;
+    }
+    h1,
+    h2,
+    h3 {
+        padding: 0 100px 5px 20px;
+        margin: 5px 0 0 0 !important;
+        color: contrast(@idgx-main-color);
+    }
+    p {
+        padding: 0 100px 0 20px;
+        color: #fff;
+    }
+    h2 a, h1 a, h3 a,
+    h2 a:hover, h1 a:hover, h3 a:hover {
+        color: contrast(@idgx-main-color) !important;
+    }
+    h1 {
+    	font-size: 220%;
+    }
+    h2 {
+    	font-size: 180%;
+    }
+    h3 {
+    	font-size: 140%;
+    }
+    .tile-section, time {
+        color: contrast(@idgx-main-color);
+        left: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 0 100px 10px 20px;
+    }
+    >div:after {
+        background-color: transparent;
+        background-image:
+        linear-gradient(
+          transparent, #000
+        );
+        content: ".";
+        display: block;
+        height: 370px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        opacity: .8;
+        z-index: -1;
+        text-indent: -3000px;
+    }
+}
+#content .tile.foto-sobreposta p,
+#content .tile.foto-sobreposta-pequena p {
+    padding: 0 20px;
+    color: contrast(@idgx-main-color);
+    line-height: 1.9rem !important;
+}
+
+/* Citacao */
+.tile-citacao {
+	background-color: darken(@idgx-main-bg, 7%);
+	padding: 10px 20px;
+	text-align: center;
+	min-height: 370px;
+    vertical-align: middle;
+    display: flex;
+    flex-wrap: wrap;
+
+    h1, h2, h3 {
+    	font-size: 160%;
+    }
+}
+
+.tile-citacao:before,
+.tile-citacao:after {
+	display: block;
+    font-family: "idgx";
+    font-size: 100px;
+    line-height: 100px;
+    color: darken(@idgx-main-bg, 10%);
+    width: 100%;
+}
+.tile-citacao:before {
+	content: "\f10d";
+    text-align: left;
+}
+.tile-citacao:after {
+	content: "\f10e";
+	text-align: right;
 }
 
 /* Titulo de secao */
