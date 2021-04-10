@@ -101,3 +101,33 @@ article#content article {
 	}
 
 }
+.relatedItems {
+	margin-top: 20px;
+
+	header {
+		font-family: @idgx-title-font;
+		font-size: 3rem;
+	}
+
+	ul {
+		text-align: left;
+		font-size: 110%;
+		font-weight: bold;
+		list-style: none;
+		padding: 0;
+
+		a {
+			text-decoration: none;
+		}
+	}
+	.contenttype-file:before {
+		content: "\e826";
+		font-family: idgx;
+		color: darken(@idgx-main-bg, 40%);
+	}
+	.contenttype-link::before {
+		content: "\e82e";
+		font-family: idgx;
+		color: darken(@idgx-main-bg, 40%);
+	}
+}
