@@ -33,6 +33,9 @@
     	max-width: 100%;
     	height: auto;
     }
+    time {
+    	font-size: 80%;
+    }
 }
 .tile-header {
 	font-size: 180%;
@@ -113,6 +116,11 @@ body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view
 	    	font-size: 80%;
 	    	color: #fff;
 	    }
+	    p.tile-section, .tile-subtitle {
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 69%;
+		}
 	}
 	.destaque-principal .tile::after {
 		background-image: radial-gradient(transparent,#000);
@@ -174,7 +182,7 @@ body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view
 }
 
 /* tile de foto sobreposta */
-.tile.foto-sobreposta {
+.tile.foto-sobreposta, .foto-sobreposta .tile {
     position: relative;
     display: flex;
     height: 370px;
@@ -256,13 +264,13 @@ body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view
         left: 0;
         top: 0;
         right: 0;
-        opacity: .8;
+        opacity: .6;
         z-index: -1;
         text-indent: -3000px;
     }
 }
-#content .tile.foto-sobreposta p,
-#content .tile.foto-sobreposta-pequena p {
+#content .foto-sobreposta p,
+#content .foto-sobreposta-pequena p {
     padding: 0 20px;
     color: #fff;
     line-height: 1.9rem !important;
