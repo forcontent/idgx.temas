@@ -8,13 +8,26 @@
     margin-left: 0;
     height: 45px;
 }
-#portal-searchbox:after {
+.searchButton:before {
 	content: "\e802";
     font-family: idgx;
     float: right;
     color: @idgx-searchbox-icon;
     font-size: 2rem;
     margin-right: 6px;
+}
+.searchButton, .searchButton:hover {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    right: 0;
+    top: 2px;
+    position: absolute;
+}
+.searchButton span {
+    text-indent: -5000px;
+    display: block;
 }
 input.searchField {
     background: transparent;
@@ -28,7 +41,7 @@ input.searchField::placeholder {
     color: contrast(@idgx-searchbox);
 }
 #portal-searchbox input[type="submit"] {
-    display: none;
+    background: transparent;
 }
 #portal-searchbox.busca-ativada {
 	right: 15px;

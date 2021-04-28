@@ -57,6 +57,12 @@
       <!-- remove busca localizada -->
       <drop css:content=".searchSection" />
 
+      <replace css:content="div#portal-searchbox input.searchButton">
+        <button type="submit" class="searchButton">
+              <span>Buscar</span>
+        </button>
+    </replace>
+
       <!-- adiciona icones sociais ao menu -->
       <after css:content=".portlet-static-idgx-icones" css:theme="#mainnavigation" />
 
