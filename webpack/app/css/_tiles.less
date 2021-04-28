@@ -713,6 +713,47 @@ body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view
 	}
 }
 
+/* tile de faq */
+.tile-faq {
+    h2 {
+        text-align: center;
+    }
+    p {
+        color: @idgx-main-bg;
+    }
+    dl {
+        margin: 0 0 50px 0;
+    }
+    dt {
+        font-size: 1.8rem;
+        margin-bottom: 6px !important;
+        margin-top: 10px;
+        padding: 10px;
+    }
+    dt:hover {
+        cursor: pointer;
+        background: #f7f7f7;
+    }
+    dt:before {
+        content: "+";
+        color: @idgx-link;
+        white-space: nowrap;
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 2rem;
+        float: left;
+    }
+    dt.aberto:before{
+        content: "-";
+        margin-top: -3px;
+    }
+    dd {
+        margin: 0 0 20px 29px;
+        padding-bottom: 10px;
+        display:none;
+    }
+}
+
 /* correcoes do layout apenas para o tema*/
 .template-layoutedit.header-fixo, 
 .template-compose.header-fixo {
