@@ -270,8 +270,9 @@ body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view
     }
 }
 
-/* tile de foto sobreposta grande */
-.tile.foto-sobreposta-grande, .foto-sobreposta-grande .tile {
+/* foto sobreposta grande e revista */
+.tile.foto-sobreposta-grande, .foto-sobreposta-grande .tile,
+.tile.foto-revista, .foto-revista .tile {
     position: relative;
     display: flex;
     height: 740px;
@@ -358,6 +359,27 @@ body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view
         text-indent: -3000px;
     }
 }
+.tile.foto-revista, .foto-revista .tile {
+    .tile-content {
+        align-self: flex-start;
+        padding-top: 20px;
+    }
+    >div:after {
+    	background-image:
+        linear-gradient(
+          #000, transparent
+        );
+    }
+    h1 {
+    	font-size: 220%;
+    }
+    h2 {
+    	font-size: 180%;
+    }
+    h3 {
+    	font-size: 140%;
+    }
+}
 
 /* NITF */
 
@@ -408,7 +430,7 @@ body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view
 			width: 100%;
 			text-align: center;
 			font-size: 180%;
-			margin-top: 20px;
+			margin-top: 40px;
 		}
 		p {
 			width: 100%;
