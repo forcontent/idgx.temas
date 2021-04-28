@@ -375,12 +375,13 @@ body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view
 
 #tabs {
 	padding: 0;
-	margin: 0;
+	margin: 20px 0 0 0;
 
 	li {
 		display: inline-block;
 		margin-right: 20px;
 		font-family: @idgx-title-font;
+		margin-bottom: 0;
 	}
 	li a {
 		cursor: pointer;
@@ -402,6 +403,16 @@ body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+
+		h1, h2, h3 {
+			width: 100%;
+			text-align: center;
+			font-size: 180%;
+		}
+		p {
+			width: 100%;
+			text-align: center;
+		}
 
 		ul {
 			display: flex;
@@ -474,7 +485,7 @@ body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view
 		margin-bottom: 1rem;
 		color: lighten(@idgx-main-color, 20%) !important;
 	}
-	p {
+	.tile-content div p {
 		font-size: 1.3rem;
 	}
 	h1, h2, h3, h4 {
