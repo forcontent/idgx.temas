@@ -61,10 +61,17 @@
         <button type="submit" class="searchButton">
               <span>Buscar</span>
         </button>
-    </replace>
+      </replace>
 
       <!-- adiciona icones sociais ao menu -->
       <after css:content=".portlet-static-idgx-icones" css:theme="#mainnavigation" />
+
+      <!-- posiciona seção e subtitulo -->
+      <after css:content=".section" css:theme="#above-content-wrapper" method="raw" />
+      <after css:content=".subtitle" css:theme="#above-content-wrapper" method="raw" />
+      <!-- depois remove os dois -->
+      <drop css:content="#content .section" />
+      <drop css:content="#content .subtitle" />
 
       <!-- Adiciona classe para controlar o destaque no topo -->
       <rules css:if-content=".destaque-principal">
@@ -77,6 +84,11 @@
       <!-- Adiciona widget do addthis -->
       <after css:content="h1.documentFirstHeading">
           <div class="addthis_inline_share_toolbox"></div>
+      </after>
+
+      <!-- adiciona divisao entre o header a a imagem/conteudo da noticia -->
+      <after css:content="#viewlet-below-content-title">
+          <div class="divisao-conteudo"></div>
       </after>
 
       <!-- Copia menu para o rodapé -->
