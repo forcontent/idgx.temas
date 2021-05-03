@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'idgx';
-  src: url('../font/idgx.eot?51312841');
-  src: url('../font/idgx.eot?51312841#iefix') format('embedded-opentype'),
-       url('../font/idgx.woff2?51312841') format('woff2'),
-       url('../font/idgx.woff?51312841') format('woff'),
-       url('../font/idgx.ttf?51312841') format('truetype'),
-       url('../font/idgx.svg?51312841#idgx') format('svg');
+  src: url('../font/idgx.eot?17475642');
+  src: url('../font/idgx.eot?17475642#iefix') format('embedded-opentype'),
+       url('../font/idgx.woff2?17475642') format('woff2'),
+       url('../font/idgx.woff?17475642') format('woff'),
+       url('../font/idgx.ttf?17475642') format('truetype'),
+       url('../font/idgx.svg?17475642#idgx') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'idgx';
-    src: url('../font/idgx.svg?51312841#idgx') format('svg');
+    src: url('../font/idgx.svg?17475642#idgx') format('svg');
   }
 }
 */
@@ -116,6 +116,18 @@
 .icon-key:before { content: '\e83a'; } /* '' */
 .icon-truck:before { content: '\e83b'; } /* '' */
 .icon-hammer:before { content: '\e83c'; } /* '' */
+.icon-trator:before { content: '\e83d'; } /* '' */
+.icon-educacao:before { content: '\e83e'; } /* '' */
+.icon-telefone-antigo:before { content: '\e83f'; } /* '' */
+.icon-coronavirus:before { content: '\e840'; } /* '' */
+.icon-trabalho:before { content: '\e841'; } /* '' */
+.icon-home-office:before { content: '\e842'; } /* '' */
+.icon-cheques:before { content: '\e843'; } /* '' */
+.icon-informacao:before { content: '\e844'; } /* '' */
+.icon-predio-comercial:before { content: '\e845'; } /* '' */
+.icon-pesquisa-de-lista:before { content: '\e846'; } /* '' */
+.icon-licenciamento:before { content: '\e847'; } /* '' */
+.icon-juiz:before { content: '\e848'; } /* '' */
 .icon-phone-squared:before { content: '\f098'; } /* '' */
 .icon-twitter:before { content: '\f099'; } /* '' */
 .icon-facebook:before { content: '\f09a'; } /* '' */
