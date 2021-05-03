@@ -39,7 +39,8 @@ img {
 }
 #portal-breadcrumbs {
 	background-color: @idgx-breadcrumb;
-	color: @idgx-main-color;
+	color: @idgx-link;
+	font-size: 80%;
 
 	a {
 		text-decoration: none;
@@ -48,7 +49,7 @@ img {
 		text-decoration: underline;
 	}
 	ol a {
-		color: @idgx-main-color;
+		color: @idgx-link;
 	}
 
 	.container {
@@ -61,7 +62,7 @@ img {
 }
 .plone-breadcrumb ol > li + li::after,
 .plone-breadcrumb ol > li + li::before  {
-	color: @idgx-main-color;
+	color: @idgx-link;
 	content: "/";
 	border: none;
 	top: 0;

@@ -7,5 +7,7 @@
     i18n_domain="idgx.temas">
 
   <plone:static type="theme" name="padrao" directory="themes/padrao" />
+  <plone:static type="theme" name="padrao-verde" directory="themes/padrao-verde" />
+  <plone:static type="theme" name="padrao-amarelo" directory="themes/padrao-amarelo" />
 
 </configure>

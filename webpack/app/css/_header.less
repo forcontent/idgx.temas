@@ -34,7 +34,7 @@ div#idgx-title {
 
 	.icon-menu {
 		cursor: pointer;
-		color: @idgx-main-color !important;
+		color: @idgx-header-link !important;
 	    width: 42px;
 	    height: 42px;
 	    border-radius: 42px;
@@ -43,11 +43,11 @@ div#idgx-title {
 	    margin-right: 10px;
 	}
 	.icon-menu:hover {
-		background-color: @idgx-main-color;
-		color: #fff !important;
+		background-color: @idgx-header-link !important;
+		color: @idgx-header !important;
 	}
 	a {
-		color: @idgx-header-text;
+		color: contrast(@idgx-header);
 		text-decoration: none;
 	}
 }
@@ -235,7 +235,7 @@ div#idgx-title {
     }
     a {
     	text-decoration: none;
-    	color: @idgx-main-color;
+    	color: @idgx-header-link;
     	font-weight: bold;
     	margin-left: 7px;
     	font-size: 90%;
