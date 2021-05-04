@@ -1,7 +1,17 @@
 @media screen and (max-width: 800px) {
+
+	#idgx-actions,
+	#portal-logo,
+	#portal-footer-wrapper #portal-globalnav {
+		display: none;
+	}
 	img {
 		max-width: 100%;
 		height: auto;
+	}
+	.documentFirstHeading {
+		font-size: 3rem;
+    	line-height: 4rem;
 	}
 	header#content-header {
 		padding: 0 5px;
@@ -57,5 +67,11 @@
 	}
 	.plone-navbar-header {
 		display: none;
+	}
+
+	/* tiles */
+	.tile.bloco-itens .tile-content div, 
+	.tile.bloco-itens .tile-content li {
+		width: 48%;
 	}
 }
