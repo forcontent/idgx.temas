@@ -9,5 +9,8 @@
   <plone:static type="theme" name="padrao" directory="themes/padrao" />
   <plone:static type="theme" name="padrao-verde" directory="themes/padrao-verde" />
   <plone:static type="theme" name="padrao-amarelo" directory="themes/padrao-amarelo" />
+  <plone:static type="theme" name="cor-azul" directory="themes/cor-azul" />
+  <plone:static type="theme" name="cor-verde" directory="themes/cor-verde" />
+  <plone:static type="theme" name="cor-amarelo" directory="themes/cor-amarelo" />
 
 </configure>
