@@ -19,8 +19,11 @@
 			right: 0;
 		}
 	}
+	#portal-header {
+		padding-left: 0;
+		padding-top: 0;
+	}
 	.header-fixo {
-		padding-top: 0 !important;
 		#content-header {
 			position: fixed;
 			z-index: 4;
@@ -38,12 +41,15 @@
 		}
 	}
 
-
-	div#idgx-title {
-	    width: 100%;
+	#mainnavigation-wrapper {
+		right: 0;
 	}
+	.icon-menu-aberto {
+	    right: 0;
+    }
 	div#idgx-title {
 	    width: 100%;
+	    padding-top: 10px;
 	}
 	#portal-searchbox {
 	    width: 100%;
@@ -68,10 +74,54 @@
 	.plone-navbar-header {
 		display: none;
 	}
+	.plone-nav li a {
+	    font-size: 1.6rem;
+	}
 
 	/* tiles */
 	.tile.bloco-itens .tile-content div, 
 	.tile.bloco-itens .tile-content li {
 		width: 48%;
+	}
+
+	/* Destaque do topo */
+	body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view {
+		padding-top: 130px;
+	}
+	.portaltype-collective-cover-content.template-view {
+		.row.destaque-principal {
+			.tile {
+			    height: 340px;
+			}
+			.tile-content {
+				height: 350px;
+			    padding-bottom: 60px;
+			    margin-bottom: 50px;
+			}
+			img {
+				height: 450px;
+			    width: 100%;
+			    top: 130px;
+			}
+			h1, h2, h3, h4 {
+				a {
+					font-size: 110%;
+				}
+			}
+			h1 {
+				font-size: 180%;
+			}
+			h2 {
+				font-size: 140%;
+			}
+		}
+		.destaque-principal .tile::after {
+		    height: 450px;
+		    top: 130px;
+		}
+	}
+
+	.voltar-topo {
+	    margin: 20px 16px;
 	}
 }

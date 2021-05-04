@@ -45,6 +45,7 @@ module.exports = [
   createTheme('padrao-verde'),
   createTheme('padrao-amarelo'),
   createTheme('cor-azul'),
+  createTheme('cor-azul-escuro'),
   createTheme('cor-verde'),
   createTheme('cor-amarelo'),
 ];
