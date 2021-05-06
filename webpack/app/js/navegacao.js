@@ -9,14 +9,6 @@ jQuery(function($) {
   
     $( "#portal-globalnav li:has(.submenu)" ).addClass( "tem-submenu" );
 
-    $("#portal-searchbox .searchField").focus(function(){
-        $("#portal-searchbox").toggleClass("busca-ativada");
-    });
-
-    $("#portal-searchbox .searchField").blur(function(){
-        $("#portal-searchbox").toggleClass("busca-ativada");
-    });
-
     $(window).scroll(function() {
       if ($(document).scrollTop() > 60) {
         $("body").addClass("header-fixo");

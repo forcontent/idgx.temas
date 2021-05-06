@@ -47,7 +47,7 @@ input.searchField::placeholder {
 	right: 15px;
     width: 96%;
     position: absolute;
-    top: 50px;
+    top: 55px;
 
     input.searchField {
     	width: 100% !important;
@@ -58,4 +58,23 @@ input.searchField::placeholder {
 }
 .header-fixo #portal-searchbox.busca-ativada {
 	top: 0px;
+}
+
+.fechar-busca {
+    display: none;
+    width: 26px;
+    height: 26px;
+    background-color: @idgx-header-link;
+    border-radius: 20px;
+    position: absolute;
+    right: -38px;
+    top: 5px;
+    font-weight: bold;
+    line-height: 128%;
+    font-size: 120%;
+    text-align: center;
+    cursor: pointer;
+}
+#portal-searchbox.busca-ativada .fechar-busca {
+    display: block;
 }

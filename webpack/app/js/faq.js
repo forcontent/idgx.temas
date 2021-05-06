@@ -4,5 +4,3 @@ jQuery(function($) {
         $(this).toggleClass("aberto");
     });
 });
-
-

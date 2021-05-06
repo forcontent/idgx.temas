@@ -57,10 +57,12 @@
       <!-- remove busca localizada -->
       <drop css:content=".searchSection" />
 
+      <!-- Altera o botão de busca -->
       <replace css:content="div#portal-searchbox input.searchButton">
         <button type="submit" class="searchButton">
               <span>Buscar</span>
         </button>
+        <span class="fechar-busca"><i class="icon-cancel"></i></span>
       </replace>
 
       <!-- adiciona icones sociais ao menu -->
