@@ -403,6 +403,25 @@ body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view
 		border-color: @idgx-main-bg;
 	}
 }
+#tabs.botao {
+	margin-bottom: 36px;
+	li {
+		margin-right: 5px;
+	}
+	li a, li a:hover {
+		border: 2px solid @idgx-main-color;
+		background: @idgx-main-color;
+		color: contrast(@idgx-main-color);
+		padding: 10px 20px;
+		font-size: 110%;
+		border-radius: 30px;
+	}
+	li a.inactive {
+		border: 2px solid lighten(@idgx-main-color, 20%);
+		color: lighten(@idgx-main-color, 20%);
+		background: @idgx-main-bg;
+	}
+}
 .tabcontainer {
 	margin: 20px 0 40px 0;
 }
@@ -752,6 +771,11 @@ body.destaque-topo.header-fixo.portaltype-collective-cover-content.template-view
     transform: rotate(-2deg);
     padding: 20px 10px;
     box-shadow: 6px 7px 6px 0 rgb(0 0 0 / 16%);
+
+    a, a:hover {
+    	color: contrast(@idgx-main-color) !important;
+    	cursor: pointer;
+    }
 }
 
 /* correcoes do layout apenas para o tema*/
