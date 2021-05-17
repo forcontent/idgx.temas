@@ -494,16 +494,16 @@ h1 a, h2 a, h3 a, h4 a {
 		display: inline-block;
 		margin-right: 20px;
 		font-family: @idgx-title-font;
-		margin-bottom: 0;
+		margin-bottom: 20px;
 	}
-	li a {
+	li a, li a:hover {
 		cursor: pointer;
 		font-weight: bold;
-		border-bottom: 2px solid @idgx-main-color;
+		border-bottom: 2px solid @idgx-main-color !important;
 		font-size: 140%;
 	}
 	li a.inactive {
-		border-color: @idgx-main-bg;
+		border-color: @idgx-main-bg !important;
 	}
 }
 #tabs.botao {
@@ -514,19 +514,19 @@ h1 a, h2 a, h3 a, h4 a {
 	li a, li a:hover {
 		border: 2px solid @idgx-main-color;
 		background: @idgx-main-color;
-		color: contrast(@idgx-main-color);
+		color: contrast(@idgx-main-color) !important;
 		padding: 10px 20px;
 		font-size: 110%;
 		border-radius: 30px;
 	}
 	li a.inactive {
-		border: 2px solid lighten(@idgx-main-color, 20%);
-		color: lighten(@idgx-main-color, 20%);
+		border: 2px solid @idgx-main-color;
+		color: @idgx-main-color !important;
 		background: @idgx-main-bg;
 	}
 }
 .tabcontainer {
-	margin: 20px 0 40px 0;
+	margin: 10px 0 40px 0;
 }
 
 /* bloco de itens DIV */
