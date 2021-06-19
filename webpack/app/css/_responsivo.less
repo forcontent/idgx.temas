@@ -10,8 +10,8 @@
 		height: auto;
 	}
 	.documentFirstHeading {
-		font-size: 3rem;
-    	line-height: 4rem;
+		font-size: 2.4rem;
+    	line-height: 3rem;
 	}
 	header#content-header {
 		padding: 0 5px;
@@ -132,10 +132,16 @@
 
 	    article.tileItem {
 
-	        h2, div, 
+	        h2, div {
+	        	width: 100%;
+	            position: relative;
+	        }
+	        h2 {
+	        	font-size: 24px;
+	        }
 	        .tileImageNoFloat, 
 	        .tileImage {
-	            width: 100%;
+	            width: auto;
 	            position: relative;
 	        }
 
@@ -143,6 +149,10 @@
 	        .tileImageNoFloat img {
 	        	width: 100%;
 	        }
+	    }
+	    article.tileItem .tileImageNoFloat, 
+	    article.tileItem .tileImage {
+	    	text-align: left;
 	    }
 	}
 	#portal-searchbox.busca-ativada {
