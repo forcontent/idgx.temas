@@ -4,7 +4,6 @@ from Products.CMFPlone.interfaces import ISiteSchema
 from plone.formwidget.namedfile.converter import b64encode_file
 from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
-from zope.component.hooks import getSite
 from zope.interface import implementer
 import os
 
@@ -28,17 +27,15 @@ def get_file(filename):
 
 
 def logo(context, remove=False):
-    site = getSite()
     registry = getUtility(IRegistry)
     settings = registry.forInterface(ISiteSchema, prefix="plone", check=False)
-    site_url = site.absolute_url()
 
     filename = 'logo.png'
     b64 = b64encode_file(filename, get_file(filename))
 
     if hasattr(settings, 'site_logo'):
         if remove:
-            setattr(settings, 'site_logo', '') 
+            setattr(settings, 'site_logo', '')
         else:
             setattr(settings, 'site_logo', b64)
 
