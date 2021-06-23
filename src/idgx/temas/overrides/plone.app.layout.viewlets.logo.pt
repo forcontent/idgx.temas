@@ -1,17 +1,22 @@
-<a id="portal-logo"
-   title="Home"
-   accesskey="1"
-   tal:attributes="href view/navigation_root_url;
-                   title view/navigation_root_title"
-   i18n:domain="plone"
-   i18n:attributes="title">
-    <img src="logo.jpg" alt=""
-         tal:attributes="title view/logo_title;
-                         alt view/logo_title;
-         				 src view/img_src" /></a>
-    <div id="idgx-title">
-      <span class="demo-icon icon-menu"> </span>
-    	<a tal:attributes="href view/navigation_root_url">
-        <span tal:content="view/logo_title">Título do portal</span>
-      </a>
-    </div>
+<tal:block tal:define="helper python:context.restrictedTraverse('@@microsite_helper');
+                       is_microsite helper/enabled|nothing;
+                       url    python: view.navigation_root_url if not
+                                       is_microsite else context.portal_url();">
+  <a id="portal-logo"
+     title="Home"
+     accesskey="1"
+     tal:attributes="href url;
+                     title view/navigation_root_title"
+     i18n:domain="plone"
+     i18n:attributes="title">
+      <img src="logo.jpg" alt=""
+           tal:attributes="title view/logo_title;
+                           alt view/logo_title;
+           				 src view/img_src" /></a>
+  <div id="idgx-title">
+    <span class="demo-icon icon-menu"> </span>
+  	<a tal:attributes="href url">
+      <span tal:content="view/logo_title">Título do portal</span>
+    </a>
+  </div>
+</tal:block>
