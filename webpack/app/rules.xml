@@ -65,6 +65,12 @@
         <span class="fechar-busca"><i class="icon-cancel"></i></span>
       </replace>
 
+      <!-- Microsite header -->
+      <drop css:content=".portaltype-plone-microsite #idgx-title" />
+      <before css:content="#microsite-title a">
+        <span class="demo-icon icon-menu"> </span>
+      </before>
+
       <!-- adiciona icones sociais ao menu -->
       <after css:content=".portlet-static-idgx-icones" css:theme="#mainnavigation" />
 
