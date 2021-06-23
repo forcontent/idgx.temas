@@ -13,7 +13,7 @@
            tal:attributes="title view/logo_title;
                            alt view/logo_title;
            				 src view/img_src" /></a>
-  <div id="idgx-title">
+  <div id="idgx-title" tal:condition="not: is_microsite">
     <span class="demo-icon icon-menu"> </span>
   	<a tal:attributes="href url">
       <span tal:content="view/logo_title">Título do portal</span>
