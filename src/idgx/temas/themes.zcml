@@ -13,5 +13,6 @@
   <plone:static type="theme" name="cor-azul-escuro" directory="themes/cor-azul-escuro" />
   <plone:static type="theme" name="cor-verde" directory="themes/cor-verde" />
   <plone:static type="theme" name="cor-amarelo" directory="themes/cor-amarelo" />
+  <plone:static type="theme" name="reduzido-azul-escuro" directory="themes/reduzido-azul-escuro" />
 
 </configure>

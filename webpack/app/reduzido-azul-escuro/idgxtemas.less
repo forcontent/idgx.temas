@@ -1,0 +1,87 @@
+/* Variaveis Principais do IDGX PADRAO */
+@idgx-main-color: #133955;
+@idgx-support-color: @idgx-main-color;
+@idgx-main-bg: #fff;
+
+/* Fontes */
+@idgx-main-font: Raleway,sans-serif;
+@idgx-text-color: #000;
+@idgx-title-font: merriweatherblack_italic;
+
+/* Demais variaveis do IDGX */
+@idgx-body: @idgx-main-bg;
+@idgx-title: #333;
+@idgx-title-link: @idgx-main-color;
+@idgx-link: lighten(@idgx-main-color, 10%);
+@idgx-tile-link: lighten(@idgx-main-color, 10%);
+@idgx-header: @idgx-main-color;
+@idgx-header-text: @idgx-text-color;
+@idgx-header-link: #fff;
+@idgx-searchbox: darken(@idgx-main-bg, 5%);
+@idgx-searchbox-icon: @idgx-support-color;
+@idgx-navbar: @idgx-main-color;
+@idgx-breadcrumb: @idgx-main-bg;
+@idgx-footer: darken(@idgx-main-color, 8%);
+
+/* tags */
+@tag-urgente: red;
+@tag-aviso: yellow;
+@tag-comunicado: green; 
+
+
+/*Estilos Básicos do IDGX */
+@import '../css/_fonts.css';
+@import '../css/_basico.less';
+@import '../css/_header.less';
+@import '../css/_busca.less';
+@import '../css/_conteudo.less';
+@import '../css/_tiles.less';
+@import '../css/_colecao.less';
+@import '../css/_portlets.less';
+@import '../css/_footer.less';
+@import '../css/_icones.less';
+@import '../css/_responsivo.less';
+@import '../css/_contraste.less';
+
+
+/* Estilos customizados, caso precise */
+
+body {
+	padding-top: 120px;
+}
+body.header-fixo {
+    padding-top: 120px;
+}
+
+.row.destaque-principal .galleria-container {
+    top: 70px;
+}
+.portaltype-collective-cover-content.template-view .destaque-principal .tile::after {
+	top: 70px;
+}
+
+#portal-searchbox, #idgx-title a {
+	display: none;
+}
+div#idgx-title {
+	width: 50px;
+	padding-top: 0;
+	order: 0;
+	padding-left: 0 !important;
+}
+#portal-logo {
+	order: 1;
+}
+#content-header {
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.header-fixo #idgx-actions {
+    display: inline-flex;
+}
+#idgx-actions {
+    top: 25px;
+}

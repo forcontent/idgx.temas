@@ -48,4 +48,5 @@ module.exports = [
   createTheme('cor-azul-escuro'),
   createTheme('cor-verde'),
   createTheme('cor-amarelo'),
+  createTheme('reduzido-azul-escuro'),
 ];
